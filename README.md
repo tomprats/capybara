@@ -115,7 +115,7 @@ end
 
 Use `:js => true` to switch to the `Capybara.javascript_driver`
 (`:selenium` by default), or provide a `:driver` option to switch
-to one specific driver. For example:
+to one specific driver.  For example:
 
 ```ruby
 describe 'some stuff which requires js', :js => true do
@@ -123,6 +123,8 @@ describe 'some stuff which requires js', :js => true do
   it 'will switch to one specific driver', :driver => :webkit
 end
 ```
+
+**Note `:js => true` should not be placed on an `it` block, but on a `describe` or `context` block.**
 
 Finally, Capybara also comes with a built in DSL for creating descriptive acceptance tests:
 
