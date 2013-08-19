@@ -115,7 +115,7 @@ end
 
 Use `:js => true` to switch to the `Capybara.javascript_driver`
 (`:selenium` by default), or provide a `:driver` option to switch
-to one specific driver. For example:
+to one specific driver.  ***Note `:js => true` should not be placed on an `it` block, but on a `describe` or `context` block.*** For example:
 
 ```ruby
 describe 'some stuff which requires js', :js => true do
